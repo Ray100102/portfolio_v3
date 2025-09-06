@@ -1,0 +1,20 @@
+body.dark-mode,
+.App.theme.dark {
+  background: #181818;
+  color: #f1f1f1;
+}
+
+.App.theme{
+  background: #cf0f0f;
+  color: rgba(17, 43, 128, 0.37);
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.App-link {
+  color: #61dafb;
+}
