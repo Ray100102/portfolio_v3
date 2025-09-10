@@ -34,17 +34,12 @@ function App() {
     <div className={`App-theme${darkMode ? " dark" : " light"}`}>
       <div id="home" className={"App"}>
         <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <section style={{ minHeight: "100vh" }}>
-          <HomeScreen />
-        </section>
+         <HomeScreen />
         <section id="about" style={{ minHeight: "100vh", padding: "2rem 0" }}>
           <h2>About</h2>
           <p>Dummy content for About section.</p>
         </section>
-        <section
-          id="projects"
-          style={{ minHeight: "100vh", padding: "2rem 0" }}
-        >
+        <section id="projects" style={{ minHeight: "100vh", padding: "2rem 0" }}>
           <h2>Projects</h2>
           <p>Dummy content for Projects section.</p>
         </section>
