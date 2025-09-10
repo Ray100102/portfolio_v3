@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./styles/App.css";
 import NavBar from "./components/NavBar";
+import HomeScreen from "./sections/HomeScreen";
 
 function App() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1200);
@@ -30,27 +31,32 @@ function App() {
   }
 
   return (
-    <div id="home" className={`App App.theme${darkMode ? ".dark" : ""}`}>
-      <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <section style={{ minHeight: "100vh", padding: "2rem 0" }}>
-        <h2>HOME</h2>
-      </section>
-      <section id="about" style={{ minHeight: "100vh", padding: "2rem 0" }}>
-        <h2>About</h2>
-        <p>Dummy content for About section.</p>
-      </section>
-      <section id="projects" style={{ minHeight: "100vh", padding: "2rem 0" }}>
-        <h2>Projects</h2>
-        <p>Dummy content for Projects section.</p>
-      </section>
-      <section id="skills" style={{ minHeight: "100vh", padding: "2rem 0" }}>
-        <h2>Skills</h2>
-        <p>Dummy content for Skills section.</p>
-      </section>
-      <section id="contact" style={{ minHeight: "100vh", padding: "2rem 0" }}>
-        <h2>Contact</h2>
-        <p>Dummy content for Contact section.</p>
-      </section>
+    <div className={`App-theme${darkMode ? " dark" : " light"}`}>
+      <div id="home" className={"App"}>
+        <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <section style={{ minHeight: "100vh" }}>
+          <HomeScreen />
+        </section>
+        <section id="about" style={{ minHeight: "100vh", padding: "2rem 0" }}>
+          <h2>About</h2>
+          <p>Dummy content for About section.</p>
+        </section>
+        <section
+          id="projects"
+          style={{ minHeight: "100vh", padding: "2rem 0" }}
+        >
+          <h2>Projects</h2>
+          <p>Dummy content for Projects section.</p>
+        </section>
+        <section id="skills" style={{ minHeight: "100vh", padding: "2rem 0" }}>
+          <h2>Skills</h2>
+          <p>Dummy content for Skills section.</p>
+        </section>
+        <section id="contact" style={{ minHeight: "100vh", padding: "2rem 0" }}>
+          <h2>Contact</h2>
+          <p>Dummy content for Contact section.</p>
+        </section>
+      </div>
     </div>
   );
 }

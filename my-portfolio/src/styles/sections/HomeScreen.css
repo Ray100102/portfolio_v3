@@ -1,0 +1,18 @@
+.home-content {
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 10rem;
+  margin-bottom: 1rem;
+}
+
+.home-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.home-btn:hover {
+  background: #21a1f3;
+  color: #fff;
+}

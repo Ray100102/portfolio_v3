@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/components/NavBar.css";
 import DarkModeToggle from "./DarkModeToggle";
 
