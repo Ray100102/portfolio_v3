@@ -2,7 +2,7 @@ import "../styles/sections/HomeScreen.css";
 
 function HomeScreen() {
   return (
-    <section id="home" className="home-screen">
+    <section id="home" className="home-section">
       <div className="home-content">
         <h1>RAY GUO</h1>
         <p>

@@ -1,0 +1,35 @@
+.experience-section {
+  min-height: 100vh;
+}
+
+.experience-content {
+  text-align: left;
+  padding: 2rem;
+}
+
+.experience-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.experience-item span {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-item p {
+  font-size: 1.1rem;
+}
