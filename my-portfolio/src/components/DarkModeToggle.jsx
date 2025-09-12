@@ -4,7 +4,10 @@ import moon from "../assets/moon.png";
 
 function DarkModeToggle({ darkMode, setDarkMode }) {
   return (
-    <div className="dark-mode-slider" onClick={() => setDarkMode((prev) => !prev)}>
+    <div
+      className="dark-mode-slider"
+      onClick={() => setDarkMode((prev) => !prev)}
+    >
       <div className={`slider-track${darkMode ? " dark" : ""}`}>
         <div className={`slider-thumb${darkMode ? " dark" : ""}`}>
           {darkMode ? (

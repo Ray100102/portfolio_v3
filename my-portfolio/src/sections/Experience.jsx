@@ -10,14 +10,16 @@ function Experience() {
             <h3>SDE - AMEX GBT</h3>
             <span>Feburary 2025 – Present</span>
             <p>
-              Building responsive web applications with React, improving UI/UX, and collaborating with designers and backend engineers.
+              Building responsive web applications with React, improving UI/UX,
+              and collaborating with designers and backend engineers.
             </p>
           </div>
           <div className="experience-item">
             <h3>Software Engineer Intern — Simsola</h3>
             <span>Summer 2022</span>
             <p>
-              Developed new features for a SaaS platform, wrote unit tests, and participated in agile sprints.
+              Developed new features for a SaaS platform, wrote unit tests, and
+              participated in agile sprints.
             </p>
           </div>
         </div>
