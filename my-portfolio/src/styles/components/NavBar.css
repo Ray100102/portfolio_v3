@@ -2,11 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   background: transparent;
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: backdrop-filter 0.3s;
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(10px); /* Adds the blur effect */
 }
 
 .navbar-logo {
@@ -17,9 +22,15 @@
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-links a {

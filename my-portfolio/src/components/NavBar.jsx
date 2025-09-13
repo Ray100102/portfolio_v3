@@ -1,9 +1,21 @@
+import { useEffect, useState } from "react";
 import "../styles/components/NavBar.css";
 import DarkModeToggle from "./DarkModeToggle";
 
 function NavBar({ darkMode, setDarkMode }) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-logo">My Portfolio</div>
       <ul className="navbar-links">
         <li>
