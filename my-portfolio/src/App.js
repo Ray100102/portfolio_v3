@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./styles/App.css";
+import Loading from "./sections/Loading";
 import NavBar from "./components/NavBar";
 import HomeScreen from "./sections/HomeScreen";
 import AboutMe from "./sections/AboutMe";
 import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 
 function App() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1200);
   const [darkMode, setDarkMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // Track loading state
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,6 +24,24 @@ function App() {
   useEffect(() => {
     document.body.className = darkMode ? "dark-mode" : "";
   }, [darkMode]);
+
+  useEffect(() => {
+    const hasLoaded = sessionStorage.getItem("hasLoaded");
+
+    if (!hasLoaded) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        sessionStorage.setItem("hasLoaded", "true");
+      }, 2000); // 2-second delay
+      return () => clearTimeout(timer);
+    } else {
+      setIsLoading(false);
+    }
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   if (!isDesktop) {
     return (
@@ -39,17 +61,8 @@ function App() {
         <HomeScreen />
         <AboutMe />
         <Experience />
-        <section
-          id="projects"
-          style={{ minHeight: "100vh", padding: "2rem 0" }}
-        >
-          <h2>Projects</h2>
-          <p>Dummy content for Projects section.</p>
-        </section>
-        <section id="contact" style={{ minHeight: "100vh", padding: "2rem 0" }}>
-          <h2>Contact</h2>
-          <p>Dummy content for Contact section.</p>
-        </section>
+        <Projects />
+        <Contact />
       </div>
     </div>
   );
