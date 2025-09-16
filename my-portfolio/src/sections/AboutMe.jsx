@@ -1,5 +1,26 @@
 import "../styles/sections/AboutMe.css";
 import tempProfilePic from "../assets/temppfp.jpg";
+import react from "../assets/logos/react.png";
+import ts from "../assets/logos/ts.png";
+import js from "../assets/logos/js.png";
+import py from "../assets/logos/python.png";
+import dd from "../assets/logos/datadog.webp";
+import jv from "../assets/logos/java.webp";
+
+const skills = [
+  { id: 1, name: "Skill 1", image: react },
+  { id: 2, name: "Skill 2", image: ts },
+  { id: 3, name: "Skill 3", image: js },
+  { id: 4, name: "Skill 4", image: jv },
+  { id: 5, name: "Skill 5", image: py },
+  { id: 6, name: "Skill 6", image: dd },
+  { id: 7, name: "Skill 7", image: tempProfilePic },
+  { id: 8, name: "Skill 8", image: tempProfilePic },
+  { id: 9, name: "Skill 9", image: tempProfilePic },
+  { id: 10, name: "Skill 10", image: tempProfilePic },
+  { id: 11, name: "Skill 11", image: tempProfilePic },
+  { id: 12, name: "Skill 12", image: tempProfilePic },
+];
 
 function AboutMe() {
   return (
@@ -25,18 +46,15 @@ function AboutMe() {
 
         <div className="about-right">
           <div className="skills-grid">
-            <div className="skill-box">
-              <img src={tempProfilePic} alt="Skill 1" className="skill-icon" />
-            </div>
-            <div className="skill-box">
-              <img src={tempProfilePic} alt="Skill 2" className="skill-icon" />
-            </div>
-            <div className="skill-box">
-              <img src={tempProfilePic} alt="Skill 3" className="skill-icon" />
-            </div>
-            <div className="skill-box">
-              <img src={tempProfilePic} alt="Skill 4" className="skill-icon" />
-            </div>
+            {skills.map((skill) => (
+              <div className="skill-box" key={skill.id}>
+                <img
+                  src={skill.image}
+                  alt={skill.name}
+                  className="skill-icon"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

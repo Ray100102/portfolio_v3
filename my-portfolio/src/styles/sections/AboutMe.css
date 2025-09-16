@@ -1,9 +1,9 @@
 .about-section {
   min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Stack title and content vertically */
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Push content below the title */
+  justify-content: flex-start;
   padding: 2rem;
   background: transparent;
 }
@@ -63,16 +63,14 @@
 }
 
 .skill-box {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 14px;
   position: relative;
-  background: #222;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .skill-box::before {
@@ -82,9 +80,27 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red);
+  background: conic-gradient(
+    #232526,
+    /* Dark gray */ #414345,
+    /* Charcoal */ #6a3093,
+    /* Deep purple */ #302b63,
+    /* Midnight blue */ #0f0c29,
+    /* Blackish blue */ #232526 /* Dark gray */
+  );
   animation: spin 3s linear infinite;
   z-index: 1;
+}
+
+.dark .skill-box::before {
+  background: conic-gradient(
+    #ff9a9e,
+    /* Soft pink */ #fad0c4,
+    /* Light peach */ #fbc2eb,
+    /* Light purple */ #a1c4fd,
+    /* Soft blue */ #c2e9fb,
+    /* Light cyan */ #ff9a9e /* Soft pink */
+  );
 }
 
 .skill-box::after {
@@ -94,15 +110,20 @@
   left: 5px;
   right: 5px;
   bottom: 5px;
-  background: #222;
-  border-radius: 12px;
+  background: var(--light-bg4);
+  border-radius: 8px;
   z-index: 2;
+}
+
+.dark .skill-box::after {
+  background: var(--dark-bg4);
 }
 
 .skill-icon {
   width: 60px;
   height: 60px;
   z-index: 3;
+  border-radius: 8px;
   position: relative;
 }
 

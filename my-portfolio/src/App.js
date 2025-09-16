@@ -55,8 +55,8 @@ function App() {
   }
 
   return (
-    <div className={`App-theme${darkMode ? " dark" : " light"}`}>
-      <div id="home" className={"App"}>
+    <div className={`App-theme ${darkMode ? "dark" : "light"}`}>
+      <div id="home" className="App">
         <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
         <HomeScreen />
         <AboutMe />

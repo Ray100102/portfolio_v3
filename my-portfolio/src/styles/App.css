@@ -1,50 +1,51 @@
-/* Dark mode gradient */
+/* Define CSS Variables for Colors */
+:root {
+  --light-text: #222;
+  --light-bg1: rgba(255, 255, 255, 0.45);
+  --light-bg2: rgba(224, 234, 252, 0.35);
+  --light-bg3: rgba(245, 247, 250, 0.38);
+  --light-bg4: #ffffff;
+  --light-bg5: #e0eafc;
+  --light-bg6: #f5f7fa;
+  --light-shadow: rgba(255, 255, 255, 0.5);
 
-.App-theme.dark {
-  color: #f1f1f1;
-  background:
-    radial-gradient(
-      circle at 20% 30%,
-      rgba(60, 60, 60, 0.25) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(80, 80, 80, 0.18) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      circle at 50% 80%,
-      rgba(40, 40, 40, 0.22) 0%,
-      transparent 65%
-    ),
-    radial-gradient(ellipse at center, #232526 0%, #0a0a0a 100%);
-  box-shadow: 0 0 200px 40px #000 inset;
+  --dark-text: #f1f1f1;
+  --dark-bg1: rgba(60, 60, 60, 0.25);
+  --dark-bg2: rgba(80, 80, 80, 0.18);
+  --dark-bg3: rgba(40, 40, 40, 0.22);
+  --dark-bg4: #232526;
+  --dark-bg5: #0a0a0a;
+  --dark-shadow: rgba(0, 0, 0, 0.5);
 }
 
-/* Light mode: scattered soft spotlights */
-.App-theme.light {
-  color: #222;
+/* Dark Theme */
+.dark {
+  color: var(--dark-text);
   background:
-    radial-gradient(
-      circle at 15% 25%,
-      rgba(255, 255, 255, 0.45) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at 70% 15%,
-      rgba(224, 234, 252, 0.35) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      circle at 60% 80%,
-      rgba(245, 247, 250, 0.38) 0%,
-      transparent 65%
-    ),
-    radial-gradient(circle at 60% 40%, #ffffff 0%, #e0eafc 70%, #f5f7fa 100%);
-  box-shadow: 0 0 120px 20px #fff8 inset;
+    radial-gradient(circle at 20% 30%, var(--dark-bg1) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, var(--dark-bg2) 0%, transparent 70%),
+    radial-gradient(circle at 50% 80%, var(--dark-bg3) 0%, transparent 65%),
+    radial-gradient(ellipse at center, var(--dark-bg4) 0%, var(--dark-bg5) 100%);
+  box-shadow: 0 0 200px 40px var(--dark-shadow) inset;
 }
 
+/* Light Theme */
+.light {
+  color: var(--light-text);
+  background:
+    radial-gradient(circle at 15% 25%, var(--light-bg1) 0%, transparent 60%),
+    radial-gradient(circle at 70% 15%, var(--light-bg2) 0%, transparent 70%),
+    radial-gradient(circle at 60% 80%, var(--light-bg3) 0%, transparent 65%),
+    radial-gradient(
+      circle at 60% 40%,
+      var(--light-bg4) 0%,
+      var(--light-bg5) 70%,
+      var(--light-bg6) 100%
+    );
+  box-shadow: 0 0 120px 20px var(--light-shadow) inset;
+}
+
+/* App Container */
 .App {
   max-width: 1200px;
   margin: 0 auto;
