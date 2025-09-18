@@ -1,13 +1,13 @@
 /* Define CSS Variables for Colors */
 :root {
   --light-text: #222;
-  --light-bg1: rgba(255, 255, 255, 0.45);
-  --light-bg2: rgba(224, 234, 252, 0.35);
-  --light-bg3: rgba(245, 247, 250, 0.38);
-  --light-bg4: #ffffff;
-  --light-bg5: #e0eafc;
-  --light-bg6: #f5f7fa;
-  --light-shadow: rgba(255, 255, 255, 0.5);
+  --light-bg1: rgba(240, 248, 255, 0.6); /* Light pastel blue */
+  --light-bg2: rgba(224, 242, 241, 0.5); /* Soft teal */
+  --light-bg3: rgba(255, 239, 213, 0.4); /* Light peach */
+  --light-bg4: #f8f9fa; /* Soft gray */
+  --light-bg5: #e9ecef; /* Slightly darker gray */
+  --light-bg6: #dee2e6; /* Muted gray */
+  --light-shadow: rgba(200, 200, 200, 0.5); /* Softer shadow */
 
   --dark-text: #f1f1f1;
   --dark-bg1: rgba(60, 60, 60, 0.25);

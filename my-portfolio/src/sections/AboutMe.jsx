@@ -49,14 +49,14 @@ function AboutMe() {
         </div>
 
         <div className="about-right">
-          <div className="canvas-container">
+          {/* <div className="canvas-container">
             <Canvas camera={{ position: [30, 20, 20], fov: 50 }}>
               <ambientLight intensity={0.5} />
               <directionalLight position={[5, 5, 5]} intensity={1} />
               <Model />
               <OrbitControls enableZoom={false} />
             </Canvas>
-          </div>
+          </div> */}
           <div className="skills-grid">
             {skills.map((skill) => (
               <div className="skill-box" key={skill.id}>

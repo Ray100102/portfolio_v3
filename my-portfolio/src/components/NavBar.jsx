@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import "../styles/components/NavBar.css";
 import DarkModeToggle from "./DarkModeToggle";
+import Logo from "../assets/temppfp.jpg";
+import li from "../assets/logos/linkedin.png";
+import git from "../assets/logos/gitNav.webp";
 
 function NavBar({ darkMode, setDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,26 +19,48 @@ function NavBar({ darkMode, setDarkMode }) {
 
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-      <div className="navbar-logo">My Portfolio</div>
-      <ul className="navbar-links">
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#experience">Experience</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+      <div className="navbar-left">
+        <a href="#home" className="navbar-logo">
+          <img src={Logo} alt="Home" className="logo-image" />
+        </a>
+        <ul className="navbar-links left-links">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#experience">Experience</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul className="navbar-links right-links">
         <li>
           <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
         </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/ray-g-903ab8200/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar-logo"
+          >
+            <img src={li} alt="LinkedIn" className="logo-box" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Ray100102"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar-logo"
+          >
+            <img src={git} alt="GitHub" className="logo-box" />
+          </a>
+        </li>
+
       </ul>
     </nav>
   );

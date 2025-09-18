@@ -6,11 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   user-select: none;
-  overflow-x: hidden; /* Disable vertical scrolling */
-}
-
-html {
-  overflow-x: hidden; /* Ensure no vertical scrolling */
 }
 
 code {

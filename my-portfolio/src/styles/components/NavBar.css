@@ -11,14 +11,37 @@
 }
 
 .navbar.scrolled {
-  backdrop-filter: blur(10px); /* Adds the blur effect */
+  backdrop-filter: blur(10px);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1.0rem;
 }
 
 .navbar-logo {
-  font-weight: bold;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
+.logo-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12%;
+}
+
+/* Navbar Links */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -28,9 +51,12 @@
   padding: 0;
 }
 
-.navbar-links li {
-  display: flex;
-  align-items: center;
+.navbar-links.left-links {
+  margin-left: 1rem;
+}
+
+.navbar-links.right-links {
+  margin-left: auto;
 }
 
 .navbar-links a {
