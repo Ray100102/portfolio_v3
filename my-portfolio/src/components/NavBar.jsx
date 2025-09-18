@@ -60,7 +60,6 @@ function NavBar({ darkMode, setDarkMode }) {
             <img src={git} alt="GitHub" className="logo-box" />
           </a>
         </li>
-
       </ul>
     </nav>
   );

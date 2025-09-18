@@ -4,10 +4,7 @@ import { Within } from "@theme-toggles/react";
 
 function DarkModeToggle({ darkMode, setDarkMode }) {
   return (
-    <div
-      className="theme-toggle"
-      onClick={() => setDarkMode((prev) => !prev)}
-    >
+    <div className="theme-toggle" onClick={() => setDarkMode((prev) => !prev)}>
       <Within
         duration={750}
         toggled={darkMode}

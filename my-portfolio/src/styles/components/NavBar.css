@@ -17,7 +17,7 @@
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 1.0rem;
+  gap: 1rem;
 }
 
 .navbar-logo {
@@ -26,7 +26,9 @@
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
 }
 
 .logo-image {
