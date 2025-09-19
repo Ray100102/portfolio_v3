@@ -4,6 +4,7 @@ import DarkModeToggle from "./DarkModeToggle";
 import Logo from "../assets/temppfp.jpg";
 import li from "../assets/logos/linkedin.png";
 import git from "../assets/logos/gitNav.webp";
+import Dude from "../models/Dude";
 
 function NavBar({ darkMode, setDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +22,7 @@ function NavBar({ darkMode, setDarkMode }) {
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-left">
         <a href="#home" className="navbar-logo">
-          <img src={Logo} alt="Home" className="logo-image" />
+          <Dude></Dude>
         </a>
         <ul className="navbar-links left-links">
           <li>

@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1200);
+      setIsDesktop(window.innerWidth >= 1000);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -47,7 +47,7 @@ function App() {
     return (
       <div className={`App${darkMode ? ".dark" : ""}`}>
         <div style={{ textAlign: "center", marginTop: "2rem" }}>
-          This portfolio is best viewed on a desktop (width ≥ 1200px). Please
+          This portfolio is best viewed on a desktop (width ≥ 1000px). Please
           switch to a desktop device.
         </div>
       </div>
