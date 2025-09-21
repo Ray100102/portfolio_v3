@@ -1,6 +1,6 @@
 .theme-toggle {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 12%;
   display: flex;
   align-items: center;
@@ -14,8 +14,8 @@
 }
 
 .theme-toggle svg {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 12%;
   transition:
     fill 0.3s ease,
@@ -32,9 +32,9 @@
 }
 
 .within-toggle.light svg {
-  fill: #000000;
+  fill: #ffffff;
 }
 
 .within-toggle.dark svg {
-  fill: #ffffff;
+  fill: #000000;
 }

@@ -9,13 +9,13 @@ import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 
 function App() {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1200);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 700);
   const [darkMode, setDarkMode] = useState(false);
-  const [isLoading, setIsLoading] = useState(true); // Track loading state
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1000);
+      setIsDesktop(window.innerWidth >= 700);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);

@@ -39,9 +39,6 @@ function NavBar({ darkMode, setDarkMode }) {
 
       <ul className="navbar-links right-links">
         <li>
-          <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
-        </li>
-        <li>
           <a
             href="https://www.linkedin.com/in/ray-g-903ab8200/"
             target="_blank"
@@ -60,6 +57,9 @@ function NavBar({ darkMode, setDarkMode }) {
           >
             <img src={git} alt="GitHub" className="logo-box" />
           </a>
+        </li>
+        <li>
+          <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
         </li>
       </ul>
     </nav>

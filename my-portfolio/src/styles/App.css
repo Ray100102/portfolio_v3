@@ -1,13 +1,12 @@
-/* Define CSS Variables for Colors */
 :root {
   --light-text: #222;
-  --light-bg1: rgba(240, 248, 255, 0.6); /* Light pastel blue */
-  --light-bg2: rgba(224, 242, 241, 0.5); /* Soft teal */
-  --light-bg3: rgba(255, 239, 213, 0.4); /* Light peach */
-  --light-bg4: #f8f9fa; /* Soft gray */
-  --light-bg5: #e9ecef; /* Slightly darker gray */
-  --light-bg6: #dee2e6; /* Muted gray */
-  --light-shadow: rgba(200, 200, 200, 0.5); /* Softer shadow */
+  --light-bg1: rgba(240, 248, 255, 0.6);
+  --light-bg2: rgba(224, 242, 241, 0.5);
+  --light-bg3: rgba(255, 239, 213, 0.4);
+  --light-bg4: #f8f9fa;
+  --light-bg5: #e9ecef;
+  --light-bg6: #dee2e6;
+  --light-shadow: rgba(200, 200, 200, 0.5);
 
   --dark-text: #f1f1f1;
   --dark-bg1: rgba(60, 60, 60, 0.25);
@@ -16,9 +15,13 @@
   --dark-bg4: #232526;
   --dark-bg5: #0a0a0a;
   --dark-shadow: rgba(0, 0, 0, 0.5);
+
+  --font-title: 35px;
+  --font-navbar: 19px;
+  --font-subtitle: 20px;
+  --font-text: 18px;
 }
 
-/* Dark Theme */
 .dark {
   color: var(--dark-text);
   background:
@@ -29,7 +32,6 @@
   box-shadow: 0 0 200px 40px var(--dark-shadow) inset;
 }
 
-/* Light Theme */
 .light {
   color: var(--light-text);
   background:
@@ -45,9 +47,8 @@
   box-shadow: 0 0 120px 20px var(--light-shadow) inset;
 }
 
-/* App Container */
 .App {
-  max-width: 1000px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 0 16px;
 }
