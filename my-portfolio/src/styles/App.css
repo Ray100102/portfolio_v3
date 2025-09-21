@@ -1,11 +1,11 @@
 :root {
   --light-text: #222;
-  --light-bg1: rgba(240, 248, 255, 0.6);
-  --light-bg2: rgba(224, 242, 241, 0.5);
-  --light-bg3: rgba(255, 239, 213, 0.4);
-  --light-bg4: #f8f9fa;
-  --light-bg5: #e9ecef;
-  --light-bg6: #dee2e6;
+  --light-bg1: rgba(245, 245, 220, 0.6);
+  --light-bg2: rgba(238, 232, 205, 0.5);
+  --light-bg3: rgba(255, 248, 220, 0.4);
+  --light-bg4: #f5f5dc;
+  --light-bg5: #e9e4d4;
+  --light-bg6: #dcdcdc;
   --light-shadow: rgba(200, 200, 200, 0.5);
 
   --dark-text: #f1f1f1;
@@ -48,7 +48,7 @@
 }
 
 .App {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 16px;
 }

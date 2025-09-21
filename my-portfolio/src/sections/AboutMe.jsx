@@ -25,9 +25,9 @@ function AboutMe() {
           <img src={tempProfilePic} alt="Profile" className="profile-pic" />
           <div className="about-text">
             <p>
-              Hi, I'm Ray Guo — a developer passionate about building
-              user-centered software experiences. I enjoy solving real-world
-              problems with thoughtful design and modern technologies.
+              I'm a developer passionate about building user-centered software
+              experiences. I enjoy solving real-world problems with thoughtful
+              design and modern technologies.
             </p>
             <p>
               I'm interested in full-stack development, UI/UX, and learning new

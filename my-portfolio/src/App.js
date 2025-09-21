@@ -10,7 +10,7 @@ import Contact from "./sections/Contact";
 
 function App() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 700);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
