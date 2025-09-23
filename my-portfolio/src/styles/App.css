@@ -24,11 +24,7 @@
 
 .dark {
   color: var(--dark-text);
-  background:
-    radial-gradient(circle at 20% 30%, var(--dark-bg1) 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, var(--dark-bg2) 0%, transparent 70%),
-    radial-gradient(circle at 50% 80%, var(--dark-bg3) 0%, transparent 65%),
-    radial-gradient(ellipse at center, var(--dark-bg4) 0%, var(--dark-bg5) 100%);
+  background: #121212;
   box-shadow: 0 0 200px 40px var(--dark-shadow) inset;
 }
 

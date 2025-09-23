@@ -52,6 +52,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 1;
 }
 
 .home-content {
@@ -81,7 +82,8 @@
 .home-subtitle {
   font-size: var(--font-text);
   position: absolute;
-  top: 400px;
+  top: 420px;
+  margin-left: 10px;
   z-index: 0;
 }
 

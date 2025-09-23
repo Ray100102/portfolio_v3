@@ -1,0 +1,45 @@
+{
+  "fullScreen": {
+    "enable": true,
+    "zIndex": 0
+  },
+  "particles": {
+    "number": {
+      "value": 50,
+      "density": {
+        "enable": true,
+        "value_area": 1200
+      }
+    },
+    "color": {
+      "value": ["#2c3e50", "#34495e", "#1abc9c"]
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+      "value": 0.7,
+      "animation": {
+        "enable": true,
+        "speed": 1.5,
+        "minimumValue": 0.3,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 4,
+      "random": true
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.8,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "outModes": {
+        "default": "out"
+      }
+    }
+  },
+  "detectRetina": true
+}

@@ -1,12 +1,10 @@
 import "../styles/sections/Projects.css";
-import tempProjectImage from "../assets/temppfp.jpg";
 
 function Projects() {
   const projects = [
-    { title: "Project 1", interval: "January 2023 - June 2023" },
-    { title: "Project 2", interval: "July 2023 - December 2023" },
-    { title: "Project 3", interval: "January 2024 - June 2024" },
-    { title: "Project 4", interval: "July 2024 - December 2024" },
+    { title: "Various Personal Websites :)", interval: "" },
+    { title: "IgniteDB", interval: "2024" },
+    { title: "BattleCode 23", interval: "Jan 2023" },
   ];
 
   const handleArrowClick = () => {

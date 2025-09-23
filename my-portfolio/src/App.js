@@ -7,11 +7,23 @@ import AboutMe from "./sections/AboutMe";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import particleOptions from "./models/particles.config.json";
 
 function App() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 700);
   const [darkMode, setDarkMode] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -39,6 +51,8 @@ function App() {
     }
   }, []);
 
+  const particlesLoaded = (container) => {};
+
   if (isLoading) {
     return <Loading />;
   }
@@ -56,6 +70,14 @@ function App() {
 
   return (
     <div className={`App-theme ${darkMode ? "dark" : "light"}`}>
+      {/* {init && (
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={particleOptions}
+          style={{ position: "absolute", zIndex: -1, width: "100%", height: "100%" }}
+        />
+      )} */}
       <div id="home" className="App">
         <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
         <HomeScreen />
