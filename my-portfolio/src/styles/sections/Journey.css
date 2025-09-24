@@ -1,4 +1,4 @@
-.experience-section {
+.journey-section {
   padding: 2rem;
   background: transparent;
   display: flex;
@@ -6,9 +6,9 @@
   align-items: flex-start;
 }
 
-.experience-title {
+.journey-title {
+  margin-top: var(--section-gap);
   font-size: var(--font-title);
-  margin-bottom: 2rem;
 }
 
 .timeline {

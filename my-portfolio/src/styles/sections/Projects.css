@@ -8,8 +8,8 @@
 }
 
 .projects-title {
+  margin-top: var(--section-gap);
   font-size: var(--font-title);
-  margin-bottom: 2rem;
 }
 
 .projects-list {
@@ -18,7 +18,6 @@
 }
 
 .project-item {
-  padding: 1rem 0;
 }
 
 .project-item h3 {
@@ -32,6 +31,6 @@
 
 .project-divider {
   border: none;
-  border-top: 1px solid #ddd; /* Light gray line */
-  margin: 1rem 0; /* Spacing around the line */
+  border-top: 1px solid #ddd;
+  margin: 1rem 0;
 }

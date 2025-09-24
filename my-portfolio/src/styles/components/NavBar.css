@@ -9,6 +9,8 @@
   z-index: 100;
   transition: backdrop-filter 0.3s;
   font-size: var(--font-navbar);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .navbar.scrolled {
@@ -48,7 +50,7 @@
 }
 
 .navbar-links.left-links {
-  margin-left: 1rem;
+  margin-left: 5px;
 }
 
 .navbar-links a {

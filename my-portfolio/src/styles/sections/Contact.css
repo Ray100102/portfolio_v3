@@ -7,25 +7,16 @@
 }
 
 .contact-title {
+  margin-top: var(--section-gap);
   font-size: var(--font-title);
   text-align: left;
   margin-bottom: 2rem;
 }
 
 .contact-container {
-  display: flex;
   gap: 2rem;
   max-width: 1200px;
   width: 100%;
-}
-
-.contact-left,
-.contact-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .contact-left p {
@@ -39,7 +30,6 @@
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  max-width: 400px;
 }
 
 .contact-input,
@@ -63,8 +53,4 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.contact-button:hover {
-  background-color: #21a1f1;
 }

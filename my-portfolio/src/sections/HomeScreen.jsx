@@ -14,7 +14,7 @@ function HomeScreen() {
         <div className="home-text">Hey,</div>
         <div className="home-text-2">I'm Ray</div>
         <div className="home-subtitle">
-          Software Developer🖥️ | Seattle ✈️ Chicago{" "}
+          Software Developer 🖥️ | Seattle ✈️ Chicago{" "}
         </div>
       </div>
       <div className="home-right">

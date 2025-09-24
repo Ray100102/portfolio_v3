@@ -29,7 +29,7 @@ function NavBar({ darkMode, setDarkMode }) {
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#journey">Journey</a>
           </li>
           <li>
             <a href="#projects">Projects</a>

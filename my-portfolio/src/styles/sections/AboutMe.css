@@ -14,7 +14,7 @@
 
 .about-title {
   font-size: var(--font-title);
-  margin-bottom: 2rem;
+  margin-top: var(--section-gap);
 }
 
 .about-container {
@@ -34,8 +34,8 @@
 }
 
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
@@ -58,15 +58,23 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 20px;
   justify-items: center;
   width: 100%;
 }
 
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+  border-radius: 8px;
+  position: relative;
+}
+
 .skill-box {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,14 +127,6 @@
 
 .dark .skill-box::after {
   background: var(--dark-bg4);
-}
-
-.skill-icon {
-  width: 50px;
-  height: 50px;
-  z-index: 3;
-  border-radius: 8px;
-  position: relative;
 }
 
 @keyframes spin {

@@ -16,10 +16,12 @@
   --dark-bg5: #0a0a0a;
   --dark-shadow: rgba(0, 0, 0, 0.5);
 
-  --font-title: 35px;
-  --font-navbar: 19px;
-  --font-subtitle: 20px;
-  --font-text: 18px;
+  --font-title: 22px;
+  --font-navbar: 15px;
+  --font-subtitle: 17px;
+  --font-text: 17px;
+
+  --section-gap: 35px;
 }
 
 .dark {

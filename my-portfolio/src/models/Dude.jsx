@@ -30,7 +30,7 @@ export default function Dude() {
       const dist = Math.sqrt(dx * dx + dy * dy);
       const speed = dt > 0 ? dist / dt : 0;
 
-      if (speed >= 15) {
+      if (speed >= 10) {
         setIsXEyes((prev) => {
           if (!prev) {
             clearTimeout(xEyeTimeout.current);
@@ -93,8 +93,8 @@ export default function Dude() {
   }, []);
 
   return (
-    <div style={{ width: 40, height: 40, margin: "auto" }}>
-      <svg id="dude-svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+    <div style={{ width: 30, height: 30, margin: "auto" }}>
+      <svg id="dude-svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
         <defs>
           <clipPath id="logoClip">
             <circle cx="20" cy="20" r="20" />

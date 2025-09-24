@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./styles/App.css";
 import Loading from "./sections/Loading";
 import NavBar from "./components/NavBar";
 import HomeScreen from "./sections/HomeScreen";
 import AboutMe from "./sections/AboutMe";
-import Experience from "./sections/Experience";
+import Journey from "./sections/Journey";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
@@ -16,6 +16,15 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [init, setInit] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  const sectionsRef = {
+    home: useRef(null),
+    about: useRef(null),
+    journey: useRef(null),
+    projects: useRef(null),
+    contact: useRef(null),
+  };
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -51,6 +60,36 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    Object.values(sectionsRef).forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => {
+      Object.values(sectionsRef).forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+    };
+  }, []);
+
   const particlesLoaded = (container) => {};
 
   if (isLoading) {
@@ -79,12 +118,16 @@ function App() {
         />
       )} */}
       <div id="home" className="App">
-        <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <HomeScreen />
-        <AboutMe />
-        <Experience />
-        <Projects />
-        <Contact />
+        <NavBar
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+          activeSection={activeSection}
+        />
+        <HomeScreen ref={sectionsRef.home} />
+        <AboutMe ref={sectionsRef.about} />
+        <Journey ref={sectionsRef.journey} />
+        <Projects ref={sectionsRef.projects} />
+        <Contact ref={sectionsRef.contact} />
       </div>
     </div>
   );

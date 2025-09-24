@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/sections/AboutMe.css";
 import tempProfilePic from "../assets/temppfp.jpg";
 import react from "../assets/logos/react.png";
@@ -14,11 +15,21 @@ const skills = [
   { id: 4, name: "Skill 4", image: jv },
   { id: 5, name: "Skill 5", image: py },
   { id: 6, name: "Skill 6", image: dd },
+  { id: 7, name: "Skill 1", image: react },
+  { id: 8, name: "Skill 2", image: ts },
+  { id: 9, name: "Skill 3", image: js },
+  { id: 10, name: "Skill 4", image: jv },
+  { id: 11, name: "Skill 5", image: py },
+  { id: 12, name: "Skill 6", image: dd },
 ];
 
-function AboutMe() {
+function AboutMe({ activeSection }) {
   return (
-    <section id="about" className="about-section">
+    <section
+      id="about"
+      className="about-section"
+      // style={{ opacity: activeSection === "about" ? 1 : 0.3 }}
+    >
       <h2 className="about-title">About Me</h2>
       <div className="about-container">
         <div className="about-left">

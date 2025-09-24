@@ -1,7 +1,7 @@
-import "../styles/sections/Experience.css";
+import "../styles/sections/Journey.css";
 
-function Experience() {
-  const experiences = [
+function Journey() {
+  const journies = [
     {
       title: "SDE - AMEX GBT",
       date: "February 2025 – Present",
@@ -22,19 +22,17 @@ function Experience() {
   ];
 
   return (
-    <section id="experience" className="experience-section">
-      <h2 className="experience-title">Experience</h2>
+    <section id="journey" className="journey-section">
+      <h2 className="journey-title">My Journey</h2>
       <div className="timeline">
-        {experiences.map((exp, index) => (
+        {journies.map((exp, index) => (
           <div className="timeline-item" key={index}>
             <div className="timeline-content">
               <h3>{exp.title}</h3>
               <span>{exp.date}</span>
               <p>{exp.description}</p>
             </div>
-            {index < experiences.length - 1 && (
-              <hr className="timeline-divider" />
-            )}
+            {index < journies.length - 1 && <hr className="timeline-divider" />}
           </div>
         ))}
       </div>
@@ -42,4 +40,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default Journey;
